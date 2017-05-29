@@ -130,6 +130,23 @@ $us->serchKey($array, $n, "value 3");
 // foreach
 $us->serch($array,  "value 3");
 
+$marray = array(1, 2, 3, 4, 5);
+print_r($marray);
+
+// Теперь удаляем каждый элемент, но сам массив оставляем нетронутым:
+foreach ($marray as $i => $value) {
+    unset($marray[$i]);
+}
+print_r($marray);
+
+// Добавляем элемент (обратите внимание, что новым ключом будет 5, вместо 0).
+$marray[] = 6;
+print_r($marray);
+
+// Переиндексация:
+$marray = array_values($marray);
+$marray[] = 7;
+print_r($marray);
 ?>
 
 
